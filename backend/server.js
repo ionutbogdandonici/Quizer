@@ -4,6 +4,8 @@ const dotenv = require('dotenv').config();
 const database = require('../backend/db/database');
 const errorHandler = require('../backend/middleware/errorMiddleware');
 
+// Prima di migrare a TypeScript
+
 const logger = require('./logger')
 
 const port = process.env.SERVER_PORT;
