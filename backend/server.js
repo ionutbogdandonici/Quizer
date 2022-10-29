@@ -23,7 +23,7 @@ app.listen(port, async () => {
         logger.info(`Server runing on port ${port}. Good work!`);
         logger.info("Database Connected");
     } catch (err) {
-        logger.error("Error occured: ", err);
-        throw err;
+        logger.error("Error occured:", err);
     }
 })
+

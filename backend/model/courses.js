@@ -1,13 +1,14 @@
-const {Sequelize, DataTypes} = require('sequelize');
+const {DataTypes} = require('sequelize');
 const db = require('../db/database');
 
 const Courses = db.sequelize.define('Courses', {
     _id: {
         type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true
     }, courseName: {
-        type: DataTypes.STRING, allowNull: false
+        type: DataTypes.STRING, allowNull: false, unique: true
     }, courseDescription: {
-        type: DataTypes.STRING, allowNull: true, defaultValue: "No description provided yet!",
+        type: DataTypes.STRING, allowNull: false,
+        defaultValue: "No description provided yet!",
     }, courseCFU: {
         type: DataTypes.INTEGER, allowNull: false
     }, courseYear: {
@@ -17,6 +18,9 @@ const Courses = db.sequelize.define('Courses', {
     }, _idCourseTeacher: {
         type: DataTypes.INTEGER, allowNull: true
     }
+}, {
+    timestamps: false,
+    tableName: 'course'
 });
 
 Courses.sync().then();
