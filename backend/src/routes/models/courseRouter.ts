@@ -6,7 +6,7 @@ const Course = require('../../model/courses');
 
 router.use(express.json());
 // Create API
-router.post("/", async (req, res) => {
+/*router.post("/", async (req, res) => {
     logger.http("POST api/courses/ ");
     const [row, created] = await Course.findOrCreate({
         where: {
@@ -85,6 +85,6 @@ router.delete('/:id', (req, res) => {
     res.json({
         apiLocation: "api/courses/:id", requestType: "DELETE"
     })
-});
+});*/
 
 module.exports = router;

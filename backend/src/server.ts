@@ -1,8 +1,10 @@
-const express = require('express');
+import express from 'express';
+import {config} from "dotenv";
+
 const app = express();
-const dotenv = require('dotenv').config();
-const database = require('../backend/db/database');
-const errorHandler = require('../backend/middleware/errorMiddleware');
+const dotenv = config();
+const database = require('./db/database');
+const errorHandler = require('./middleware/errorMiddleware');
 
 // Prima di migrare a TypeScript
 

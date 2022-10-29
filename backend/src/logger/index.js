@@ -1,4 +1,4 @@
-const quizerLogger = require('../logger/quizerLogger');
+const quizerLogger = require('./quizerLogger');
 
 const logger = quizerLogger()
 
