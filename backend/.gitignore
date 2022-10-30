@@ -1,16 +1,14 @@
-
-# npm
+# Dependency directory
 node_modules
 package-lock.json
 *.log
-*.gz
 
-# Coveralls
-.nyc_output
-coverage
+# Api keys and secrets
+.env
 
-# Benchmarking
-benchmarks/graphs
+# Ignore built ts files
+dist/**/*
 
-# ignore additional files using core.excludesFile
-# https://git-scm.com/docs/gitignore
+# Editor
+.idea
+*.iml
