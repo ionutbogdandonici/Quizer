@@ -1,6 +1,8 @@
 import express from 'express';
 import {config} from "dotenv";
 
+import {logger} from "./logger";
+
 const app = express();
 const dotenv = config();
 const database = require('./db/database');
@@ -8,7 +10,6 @@ const errorHandler = require('./middleware/errorMiddleware');
 
 // Prima di migrare a TypeScript
 
-const logger = require('./logger')
 
 const port = process.env.SERVER_PORT;
 

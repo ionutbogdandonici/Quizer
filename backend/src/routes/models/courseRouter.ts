@@ -1,12 +1,33 @@
-const express = require('express');
-const router = express.Router();
-const logger = require('../../logger');
+import * as express from 'express';
+import {logger} from "../../logger";
+import {Request, Response} from "express";
 
+let router = express.Router();
+
+// Create API
+router.post('/', async (req: Request, res: Response) => {
+    logger.http("[POST] /api/courses");
+    const [row, created] = await Course
+})
+
+export = router;
+
+/*
+import express, { Express, Request, Response } from 'express';
+const logger = require('../../logger');
 const Course = require('../../model/courses');
 
-router.use(express.json());
+const router = express.Router;
+
+
+
+router().use(express.json());
+
+router().post("/", async (req: Request, res: Response) => {
+    logger().http("POST api/courses");
+})
 // Create API
-/*router.post("/", async (req, res) => {
+router.post("/", async (req, res) => {
     logger.http("POST api/courses/ ");
     const [row, created] = await Course.findOrCreate({
         where: {
@@ -86,5 +107,3 @@ router.delete('/:id', (req, res) => {
         apiLocation: "api/courses/:id", requestType: "DELETE"
     })
 });*/
-
-module.exports = router;
