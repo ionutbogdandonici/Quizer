@@ -3,7 +3,7 @@
 <font color="red">Project is still under development, this is a conceptual version. Many functionality may change in future</font>
 
 ## Description
-This is a fullstack application that allows users to create quizzes and take quizzes. The application is built using the MERN stack (MongoDB, Express, React, Node.js). The application we'll be deplyed on Heroku.
+This is a fullstack application that allows users to create quizzes and take quizzes. 
 
 ## Installation
 ### Prerequisites
