@@ -1,4 +1,6 @@
 import express from 'express';
+import "reflect-metadata";
+
 import {config} from "dotenv";
 
 import {logger} from "./logger";

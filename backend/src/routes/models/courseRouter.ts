@@ -15,7 +15,7 @@ export = router;
 /*
 import express, { Express, Request, Response } from 'express';
 const logger = require('../../logger');
-const Course = require('../../model/courses');
+const Course = require('../../entity/courses');
 
 const router = express.Router;
 
